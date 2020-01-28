@@ -1,0 +1,51 @@
+!/bin/bash
+
+dbpf XF:11BMB-ES{IO}AO:1-SP.DESC "AO Chan1 (0-10V)"
+dbpf XF:11BMB-ES{IO}AO:2-SP.DESC "AO Chan2 (0-10V)"
+dbpf XF:11BMB-ES{IO}AO:3-SP.DESC "AO Chan3 (0-10V)"
+dbpf XF:11BMB-ES{IO}AO:4-SP.DESC "AO Chan4 (0-10V)"
+
+dbpf XF:11BMB-ES{IO}DI:1-Sts.DESC "DI Channel 1"
+dbpf XF:11BMB-ES{IO}DI:2-Sts.DESC "DI Channel 2"
+dbpf XF:11BMB-ES{IO}DI:3-Sts.DESC "DI Channel 3"
+dbpf XF:11BMB-ES{IO}DI:4-Sts.DESC "DI Channel 4"
+dbpf XF:11BMB-ES{IO}DI:5-Sts.DESC "DI Channel 5"
+dbpf XF:11BMB-ES{IO}DI:6-Sts.DESC "DI Channel 6"
+
+dbpf XF:11BMB-ES{IO}DO:1-Sts.DESC "Relay Channel 1"
+dbpf XF:11BMB-ES{IO}DO:2-Sts.DESC "Relay Channel 2"
+dbpf XF:11BMB-ES{IO}DO:3-Sts.DESC "Relay Channel 3"
+dbpf XF:11BMB-ES{IO}DO:4-Sts.DESC "Relay Channel 4"
+dbpf XF:11BMB-ES{IO}DO:5-Sts.DESC "Relay Channel 5"
+dbpf XF:11BMB-ES{IO}DO:6-Sts.DESC "Relay Channel 6"
+
+dbpf XF:11BMB-ES{IO:RTD}T:1-I.DESC "RTD Channel 1"
+dbpf XF:11BMB-ES{IO:RTD}T:2-I.DESC "RTD Channel 2"
+dbpf XF:11BMB-ES{IO:RTD}T:3-I.DESC "RTD Channel 3"
+dbpf XF:11BMB-ES{IO:RTD}T:4-I.DESC "RTD Channel 4"
+dbpf XF:11BMB-ES{IO:RTD}T:5-I.DESC "RTD Channel 5"
+dbpf XF:11BMB-ES{IO:RTD}T:6-I.DESC "RTD Channel 6"
+
+dbpf XF:11BMB-ES{IO:TC}T:1-I.DESC "TC Channel 1"
+dbpf XF:11BMB-ES{IO:TC}T:2-I.DESC "TC Channel 2"
+dbpf XF:11BMB-ES{IO:TC}T:3-I.DESC "TC Channel 3"
+dbpf XF:11BMB-ES{IO:TC}T:4-I.DESC "TC Channel 4"
+dbpf XF:11BMB-ES{IO:TC}T:5-I.DESC "TC Channel 5"
+dbpf XF:11BMB-ES{IO:TC}T:6-I.DESC "TC Channel 6"
+dbpf XF:11BMB-ES{IO:TC}T:7-I.DESC "TC Channel 7"
+dbpf XF:11BMB-ES{IO:TC}T:8-I.DESC "TC Channel 8"
+
+dbpf XF:11BMB-ES{IO}AO:5-SP.DESC "AO Chan5 (0-10V)"
+dbpf XF:11BMB-ES{IO}AO:6-SP.DESC "AO Chan6 (0-10V)"
+dbpf XF:11BMB-ES{IO}AO:7-SP.DESC "AO Chan7 (0-10V)"
+dbpf XF:11BMB-ES{IO}AO:8-SP.DESC "AO Chan8 (0-10V)"
+
+dbpf XF:11BMB-ES{IO}AI:1-I.DESC "AI Chan1 (0-10V)"
+dbpf XF:11BMB-ES{IO}AI:2-I.DESC "AI Chan2 (0-10V)"
+dbpf XF:11BMB-ES{IO}AI:3-I.DESC "AI Chan3 (0-10V)"
+dbpf XF:11BMB-ES{IO}AI:4-I.DESC "AI Chan4 (0-10V)"
+dbpf XF:11BMB-ES{IO}AI:5-I.DESC "AI Chan5 (0-10V)"
+dbpf XF:11BMB-ES{IO}AI:6-I.DESC "AI Chan6 (0-10V)"
+dbpf XF:11BMB-ES{IO}AI:7-I.DESC "AI Chan7 (0-10V)"
+dbpf XF:11BMB-ES{IO}AI:8-I.DESC "AI Chan8 (0-10V)"
+
