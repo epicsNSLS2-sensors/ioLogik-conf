@@ -1,0 +1,282 @@
+# longout record template for register inputs
+record(longout,"$(Sys,undefined)$(Dev,undefined)AO:1Raw-SP") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(ASYNPORT,undefined)_AO 0 0xFFFF)")
+}
+# longout record template for register inputs
+record(longout,"$(Sys,undefined)$(Dev,undefined)AO:2Raw-SP") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(ASYNPORT,undefined)_AO 1 0xFFFF)")
+}
+# longout record template for register inputs
+record(longout,"$(Sys,undefined)$(Dev,undefined)AO:3Raw-SP") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(ASYNPORT,undefined)_AO 2 0xFFFF)")
+}
+# longout record template for register inputs
+record(longout,"$(Sys,undefined)$(Dev,undefined)AO:4Raw-SP") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(ASYNPORT,undefined)_AO 3 0xFFFF)")
+}
+# ao record template for register outputs
+record(ao, "$(Sys,undefined)$(Dev,undefined)AO:1-SP") {
+    field(DTYP,"asynInt32")
+    field(OUT,"@asynMask($(ASYNPORT,undefined)_AO 0 12)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGUL,"0.")
+    field(EGUF,"10.")
+    field(HOPR,"10.")
+    field(LOPR,"0.")
+    field(PREC,"3")
+}
+
+# ao record template for register outputs
+record(ao, "$(Sys,undefined)$(Dev,undefined)AO:2-SP") {
+    field(DTYP,"asynInt32")
+    field(OUT,"@asynMask($(ASYNPORT,undefined)_AO 1 12)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGUL,"0.")
+    field(EGUF,"10.")
+    field(HOPR,"10.")
+    field(LOPR,"0.")
+    field(PREC,"3")
+}
+
+# ao record template for register outputs
+record(ao, "$(Sys,undefined)$(Dev,undefined)AO:3-SP") {
+    field(DTYP,"asynInt32")
+    field(OUT,"@asynMask($(ASYNPORT,undefined)_AO 2 12)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGUL,"0.")
+    field(EGUF,"10.")
+    field(HOPR,"10.")
+    field(LOPR,"0.")
+    field(PREC,"3")
+}
+
+# ao record template for register outputs
+record(ao, "$(Sys,undefined)$(Dev,undefined)AO:4-SP") {
+    field(DTYP,"asynInt32")
+    field(OUT,"@asynMask($(ASYNPORT,undefined)_AO 3 12)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGUL,"0.")
+    field(EGUF,"10.")
+    field(HOPR,"10.")
+    field(LOPR,"0.")
+    field(PREC,"3")
+}
+
+# longin record template for register inputs
+record(longin,"$(Sys,undefined)$(Dev,undefined)AO:1Raw-RB") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(ASYNPORT,undefined)_AO_RBV 0 0xFFFF)")
+    field(SCAN,"I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys,undefined)$(Dev,undefined)AO:2Raw-RB") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(ASYNPORT,undefined)_AO_RBV 1 0xFFFF)")
+    field(SCAN,"I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys,undefined)$(Dev,undefined)AO:3Raw-RB") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(ASYNPORT,undefined)_AO_RBV 2 0xFFFF)")
+    field(SCAN,"I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys,undefined)$(Dev,undefined)AO:4Raw-RB") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(ASYNPORT,undefined)_AO_RBV 3 0xFFFF)")
+    field(SCAN,"I/O Intr")
+}
+# ai record template for register inputs
+record(ai, "$(Sys,undefined)$(Dev,undefined)AO:1-RB") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asynMask($(ASYNPORT,undefined)_AO_RBV 0 12)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGUL,"0.")
+    field(EGUF,"10.")
+    field(HOPR,"10.")
+    field(LOPR,"0.")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+# ai record template for register inputs
+record(ai, "$(Sys,undefined)$(Dev,undefined)AO:2-RB") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asynMask($(ASYNPORT,undefined)_AO_RBV 1 12)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGUL,"0.")
+    field(EGUF,"10.")
+    field(HOPR,"10.")
+    field(LOPR,"0.")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+# ai record template for register inputs
+record(ai, "$(Sys,undefined)$(Dev,undefined)AO:3-RB") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asynMask($(ASYNPORT,undefined)_AO_RBV 2 12)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGUL,"0.")
+    field(EGUF,"10.")
+    field(HOPR,"10.")
+    field(LOPR,"0.")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+# ai record template for register inputs
+record(ai, "$(Sys,undefined)$(Dev,undefined)AO:4-RB") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asynMask($(ASYNPORT,undefined)_AO_RBV 3 12)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGUL,"0.")
+    field(EGUF,"10.")
+    field(HOPR,"10.")
+    field(LOPR,"0.")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+# Template for I/O statistics
+
+record(bo,"$(Sys,undefined)$(Dev,undefined)AO-SPHistEnable") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(ASYNPORT,undefined)_AO 0 0xFFFF)ENABLE_HISTOGRAM")
+    field(ZNAM,"Disable")
+    field(ONAM,"Enable")
+}
+
+record(bo, "$(Sys,undefined)$(Dev,undefined)AO-SPStatistics") {
+    field(SCAN, "10 second")
+    field(FLNK, "$(Sys,undefined)$(Dev,undefined)AO-SPHist.PROC")
+}
+
+record(waveform,"$(Sys,undefined)$(Dev,undefined)AO-SPHist") {
+    field(DTYP,"asynInt32ArrayIn")
+    field(INP,"@asyn($(ASYNPORT,undefined)_AO 0)READ_HISTOGRAM")
+    field(FTVL,"LONG")
+    field(NELM,"200")  # This number should match driver
+    field(FLNK,"$(Sys,undefined)$(Dev,undefined)AO-SPHistTimeAxis.PROC")
+}
+
+record(waveform,"$(Sys,undefined)$(Dev,undefined)AO-SPHistTimeAxis") {
+    field(DTYP,"asynInt32ArrayIn")
+    field(INP,"@asyn($(ASYNPORT,undefined)_AO 0)HISTOGRAM_TIME_AXIS")
+    field(FTVL,"LONG")
+    field(NELM,"200")  # This number should match driver
+    field(FLNK,"$(Sys,undefined)$(Dev,undefined)AO-SPReadOK.PROC")
+}
+
+record(longout,"$(Sys,undefined)$(Dev,undefined)AO-SPMsPerBin") {
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(ASYNPORT,undefined)_AO 0)HISTOGRAM_BIN_TIME")
+    field(DRVL,"0")
+    field(VAL,"1")
+    field(PINI,"1")
+}
+
+record(longin,"$(Sys,undefined)$(Dev,undefined)AO-SPReadOK") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(ASYNPORT,undefined)_AO 0)READ_OK")
+    field(FLNK,"$(Sys,undefined)$(Dev,undefined)AO-SPWriteOK.PROC")
+}
+
+record(longin,"$(Sys,undefined)$(Dev,undefined)AO-SPWriteOK") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(ASYNPORT,undefined)_AO 0)WRITE_OK")
+    field(FLNK,"$(Sys,undefined)$(Dev,undefined)AO-SPIOErrors.PROC")
+}
+
+record(longin,"$(Sys,undefined)$(Dev,undefined)AO-SPIOErrors") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(ASYNPORT,undefined)_AO 0)IO_ERRORS")
+    field(FLNK,"$(Sys,undefined)$(Dev,undefined)AO-SPLastIOTime.PROC")
+}
+
+record(longin,"$(Sys,undefined)$(Dev,undefined)AO-SPLastIOTime") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(ASYNPORT,undefined)_AO 0)LAST_IO_TIME")
+    field(FLNK,"$(Sys,undefined)$(Dev,undefined)AO-SPMaxIOTime.PROC")
+}
+
+record(longin,"$(Sys,undefined)$(Dev,undefined)AO-SPMaxIOTime") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(ASYNPORT,undefined)_AO 0)MAX_IO_TIME")
+}
+# Template for I/O statistics
+
+record(bo,"$(Sys,undefined)$(Dev,undefined)AO_RBHistEnable") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(ASYNPORT,undefined)_AO_RBV 0 0xFFFF)ENABLE_HISTOGRAM")
+    field(ZNAM,"Disable")
+    field(ONAM,"Enable")
+}
+
+record(bo, "$(Sys,undefined)$(Dev,undefined)AO_RBStatistics") {
+    field(SCAN, "10 second")
+    field(FLNK, "$(Sys,undefined)$(Dev,undefined)AO_RBHist.PROC")
+}
+
+record(waveform,"$(Sys,undefined)$(Dev,undefined)AO_RBHist") {
+    field(DTYP,"asynInt32ArrayIn")
+    field(INP,"@asyn($(ASYNPORT,undefined)_AO_RBV 0)READ_HISTOGRAM")
+    field(FTVL,"LONG")
+    field(NELM,"200")  # This number should match driver
+    field(FLNK,"$(Sys,undefined)$(Dev,undefined)AO_RBHistTimeAxis.PROC")
+}
+
+record(waveform,"$(Sys,undefined)$(Dev,undefined)AO_RBHistTimeAxis") {
+    field(DTYP,"asynInt32ArrayIn")
+    field(INP,"@asyn($(ASYNPORT,undefined)_AO_RBV 0)HISTOGRAM_TIME_AXIS")
+    field(FTVL,"LONG")
+    field(NELM,"200")  # This number should match driver
+    field(FLNK,"$(Sys,undefined)$(Dev,undefined)AO_RBReadOK.PROC")
+}
+
+record(longout,"$(Sys,undefined)$(Dev,undefined)AO_RBMsPerBin") {
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(ASYNPORT,undefined)_AO_RBV 0)HISTOGRAM_BIN_TIME")
+    field(DRVL,"0")
+    field(VAL,"1")
+    field(PINI,"1")
+}
+
+record(longin,"$(Sys,undefined)$(Dev,undefined)AO_RBReadOK") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(ASYNPORT,undefined)_AO_RBV 0)READ_OK")
+    field(FLNK,"$(Sys,undefined)$(Dev,undefined)AO_RBWriteOK.PROC")
+}
+
+record(longin,"$(Sys,undefined)$(Dev,undefined)AO_RBWriteOK") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(ASYNPORT,undefined)_AO_RBV 0)WRITE_OK")
+    field(FLNK,"$(Sys,undefined)$(Dev,undefined)AO_RBIOErrors.PROC")
+}
+
+record(longin,"$(Sys,undefined)$(Dev,undefined)AO_RBIOErrors") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(ASYNPORT,undefined)_AO_RBV 0)IO_ERRORS")
+    field(FLNK,"$(Sys,undefined)$(Dev,undefined)AO_RBLastIOTime.PROC")
+}
+
+record(longin,"$(Sys,undefined)$(Dev,undefined)AO_RBLastIOTime") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(ASYNPORT,undefined)_AO_RBV 0)LAST_IO_TIME")
+    field(FLNK,"$(Sys,undefined)$(Dev,undefined)AO_RBMaxIOTime.PROC")
+}
+
+record(longin,"$(Sys,undefined)$(Dev,undefined)AO_RBMaxIOTime") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(ASYNPORT,undefined)_AO_RBV 0)MAX_IO_TIME")
+}
+# ao record template for poll delay
+record(ao,"$(Sys,undefined)$(Dev,undefined)AO_RB_PollDelay") {
+    field(DTYP,"asynFloat64")
+    field(PREC,"3")
+    field(OUT,"@asyn($(ASYNPORT,undefined)_AO_RBV)POLL_DELAY")
+}

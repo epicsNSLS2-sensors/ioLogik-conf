@@ -1,0 +1,9 @@
+syntax: glob
+
+O.*
+bin/
+db/*
+dbd/*
+envPaths
+as/*
+records.dbl

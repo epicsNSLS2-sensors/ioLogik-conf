@@ -1,0 +1,8 @@
+epicsEnvSet("ARCH","linux-x86_64")
+epicsEnvSet("IOC","iocioLogik")
+epicsEnvSet("TOP","/epics/iocs/ioLogik")
+epicsEnvSet("SUPPORT","/epics/support")
+epicsEnvSet("ASYN","/epics/support/asyn")
+epicsEnvSet("MODBUS","/epics/support/modbus")
+epicsEnvSet("DEVIOCSTATS","/epics/support/iocStats")
+epicsEnvSet("EPICS_BASE","/usr/local/epics/base")
