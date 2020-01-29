@@ -1,0 +1,201 @@
+record(asyn,"$(Sys)$(Dev)OctetAsyn")
+{
+    field(DTYP,"asynRecordDevice")
+    field(PORT,"$(ASYNPORT)")
+    field(ADDR,"0")
+    field(OMAX,"80")
+    field(IMAX,"80")
+}
+
+# longin record template for register inputs
+record(longin,"$(Sys)$(Dev)T:1Raw-I") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(ASYNPORT)_RTD 0 0xFFFF)")
+    field(SCAN,"I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys)$(Dev)T:2Raw-I") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(ASYNPORT)_RTD 1 0xFFFF)")
+    field(SCAN,"I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys)$(Dev)T:3Raw-I") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(ASYNPORT)_RTD 2 0xFFFF)")
+    field(SCAN,"I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys)$(Dev)T:4Raw-I") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(ASYNPORT)_RTD 3 0xFFFF)")
+    field(SCAN,"I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys)$(Dev)T:5Raw-I") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(ASYNPORT)_RTD 4 0xFFFF)")
+    field(SCAN,"I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys)$(Dev)T:6Raw-I") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(ASYNPORT)_RTD 5 0xFFFF)")
+    field(SCAN,"I/O Intr")
+}
+# ai record template for register inputs
+record(ai, "$(Sys)$(Dev)T:1-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asynMask($(ASYNPORT)_RTD 0 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGUL,"0.")
+    field(EGUF,"6553.5")
+    field(HOPR,"6553.5")
+    field(LOPR,"0.")
+    field(PREC,"1")
+    field(SCAN,"I/O Intr")
+}
+
+# ai record template for register inputs
+record(ai, "$(Sys)$(Dev)T:2-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asynMask($(ASYNPORT)_RTD 1 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGUL,"0.")
+    field(EGUF,"6553.5")
+    field(HOPR,"6553.5")
+    field(LOPR,"0.")
+    field(PREC,"1")
+    field(SCAN,"I/O Intr")
+}
+
+# ai record template for register inputs
+record(ai, "$(Sys)$(Dev)T:3-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asynMask($(ASYNPORT)_RTD 2 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGUL,"0.")
+    field(EGUF,"6553.5")
+    field(HOPR,"6553.5")
+    field(LOPR,"0.")
+    field(PREC,"1")
+    field(SCAN,"I/O Intr")
+}
+
+# ai record template for register inputs
+record(ai, "$(Sys)$(Dev)T:4-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asynMask($(ASYNPORT)_RTD 3 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGUL,"0.")
+    field(EGUF,"6553.5")
+    field(HOPR,"6553.5")
+    field(LOPR,"0.")
+    field(PREC,"1")
+    field(SCAN,"I/O Intr")
+}
+
+# ai record template for register inputs
+record(ai, "$(Sys)$(Dev)T:5-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asynMask($(ASYNPORT)_RTD 4 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGUL,"0.")
+    field(EGUF,"6553.5")
+    field(HOPR,"6553.5")
+    field(LOPR,"0.")
+    field(PREC,"1")
+    field(SCAN,"I/O Intr")
+}
+
+# ai record template for register inputs
+record(ai, "$(Sys)$(Dev)T:6-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asynMask($(ASYNPORT)_RTD 5 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGUL,"0.")
+    field(EGUF,"6553.5")
+    field(HOPR,"6553.5")
+    field(LOPR,"0.")
+    field(PREC,"1")
+    field(SCAN,"I/O Intr")
+}
+
+# ai record template for register inputs
+record(ai, "$(Sys)$(Dev)T:1Avg-I") {
+    field(DTYP,"asynInt32Average")
+    field(INP,"@asynMask($(ASYNPORT)_RTD 0 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGUL,"0.")
+    field(EGUF,"6553.5")
+    field(HOPR,"6553.5")
+    field(LOPR,"0.")
+    field(PREC,"1")
+    field(SCAN,"1 second")
+}
+
+# ai record template for register inputs
+record(ai, "$(Sys)$(Dev)T:2Avg-I") {
+    field(DTYP,"asynInt32Average")
+    field(INP,"@asynMask($(ASYNPORT)_RTD 1 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGUL,"0.")
+    field(EGUF,"6553.5")
+    field(HOPR,"6553.5")
+    field(LOPR,"0.")
+    field(PREC,"1")
+    field(SCAN,"1 second")
+}
+
+# ai record template for register inputs
+record(ai, "$(Sys)$(Dev)T:3Avg-I") {
+    field(DTYP,"asynInt32Average")
+    field(INP,"@asynMask($(ASYNPORT)_RTD 2 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGUL,"0.")
+    field(EGUF,"6553.5")
+    field(HOPR,"6553.5")
+    field(LOPR,"0.")
+    field(PREC,"1")
+    field(SCAN,"1 second")
+}
+
+# ai record template for register inputs
+record(ai, "$(Sys)$(Dev)T:4Avg-I") {
+    field(DTYP,"asynInt32Average")
+    field(INP,"@asynMask($(ASYNPORT)_RTD 3 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGUL,"0.")
+    field(EGUF,"6553.5")
+    field(HOPR,"6553.5")
+    field(LOPR,"0.")
+    field(PREC,"1")
+    field(SCAN,"1 second")
+}
+
+# ai record template for register inputs
+record(ai, "$(Sys)$(Dev)T:5Avg-I") {
+    field(DTYP,"asynInt32Average")
+    field(INP,"@asynMask($(ASYNPORT)_RTD 4 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGUL,"0.")
+    field(EGUF,"6553.5")
+    field(HOPR,"6553.5")
+    field(LOPR,"0.")
+    field(PREC,"1")
+    field(SCAN,"1 second")
+}
+
+# ai record template for register inputs
+record(ai, "$(Sys)$(Dev)T:6Avg-I") {
+    field(DTYP,"asynInt32Average")
+    field(INP,"@asynMask($(ASYNPORT)_RTD 5 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGUL,"0.")
+    field(EGUF,"6553.5")
+    field(HOPR,"6553.5")
+    field(LOPR,"0.")
+    field(PREC,"1")
+    field(SCAN,"1 second")
+}
+

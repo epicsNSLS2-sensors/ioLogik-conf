@@ -1,0 +1,4 @@
+NAME=ioLogik
+USER=softioc
+PORT=6003
+HOST=xf11idb-ioc2

@@ -1,0 +1,372 @@
+# bi record template for register inputs
+record(bi,"$(Sys)$(Dev)DI:1-Sts") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(ASYNPORT)_DI 0 0x1)")
+    field(SCAN,"I/O Intr")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+    field(ZSV,"NO_ALARM")
+    field(OSV,"NO_ALARM")
+}
+# bi record template for register inputs
+record(bi,"$(Sys)$(Dev)DI:2-Sts") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(ASYNPORT)_DI 1 0x1)")
+    field(SCAN,"I/O Intr")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+    field(ZSV,"NO_ALARM")
+    field(OSV,"NO_ALARM")
+}
+# bi record template for register inputs
+record(bi,"$(Sys)$(Dev)DI:3-Sts") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(ASYNPORT)_DI 2 0x1)")
+    field(SCAN,"I/O Intr")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+    field(ZSV,"NO_ALARM")
+    field(OSV,"NO_ALARM")
+}
+# bi record template for register inputs
+record(bi,"$(Sys)$(Dev)DI:4-Sts") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(ASYNPORT)_DI 3 0x1)")
+    field(SCAN,"I/O Intr")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+    field(ZSV,"NO_ALARM")
+    field(OSV,"NO_ALARM")
+}
+# bi record template for register inputs
+record(bi,"$(Sys)$(Dev)DI:5-Sts") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(ASYNPORT)_DI 4 0x1)")
+    field(SCAN,"I/O Intr")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+    field(ZSV,"NO_ALARM")
+    field(OSV,"NO_ALARM")
+}
+# bi record template for register inputs
+record(bi,"$(Sys)$(Dev)DI:6-Sts") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(ASYNPORT)_DI 5 0x1)")
+    field(SCAN,"I/O Intr")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+    field(ZSV,"NO_ALARM")
+    field(OSV,"NO_ALARM")
+}
+# Template for I/O statistics
+
+record(bo,"$(Sys)$(Dev)DI_HistEnable") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(ASYNPORT)_DI 0 0xFFFF)ENABLE_HISTOGRAM")
+    field(ZNAM,"Disable")
+    field(ONAM,"Enable")
+}
+
+record(bo, "$(Sys)$(Dev)DI_Statistics") {
+    field(SCAN, "10 second")
+    field(FLNK, "$(Sys)$(Dev)DI_Hist.PROC")
+}
+
+record(waveform,"$(Sys)$(Dev)DI_Hist") {
+    field(DTYP,"asynInt32ArrayIn")
+    field(INP,"@asyn($(ASYNPORT)_DI 0)READ_HISTOGRAM")
+    field(FTVL,"LONG")
+    field(NELM,"200")  # This number should match driver
+    field(FLNK,"$(Sys)$(Dev)DI_HistTimeAxis.PROC")
+}
+
+record(waveform,"$(Sys)$(Dev)DI_HistTimeAxis") {
+    field(DTYP,"asynInt32ArrayIn")
+    field(INP,"@asyn($(ASYNPORT)_DI 0)HISTOGRAM_TIME_AXIS")
+    field(FTVL,"LONG")
+    field(NELM,"200")  # This number should match driver
+    field(FLNK,"$(Sys)$(Dev)DI_ReadOK.PROC")
+}
+
+record(longout,"$(Sys)$(Dev)DI_MsPerBin") {
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(ASYNPORT)_DI 0)HISTOGRAM_BIN_TIME")
+    field(DRVL,"0")
+    field(VAL,"1")
+    field(PINI,"1")
+}
+
+record(longin,"$(Sys)$(Dev)DI_ReadOK") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(ASYNPORT)_DI 0)READ_OK")
+    field(FLNK,"$(Sys)$(Dev)DI_WriteOK.PROC")
+}
+
+record(longin,"$(Sys)$(Dev)DI_WriteOK") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(ASYNPORT)_DI 0)WRITE_OK")
+    field(FLNK,"$(Sys)$(Dev)DI_IOErrors.PROC")
+}
+
+record(longin,"$(Sys)$(Dev)DI_IOErrors") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(ASYNPORT)_DI 0)IO_ERRORS")
+    field(FLNK,"$(Sys)$(Dev)DI_LastIOTime.PROC")
+}
+
+record(longin,"$(Sys)$(Dev)DI_LastIOTime") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(ASYNPORT)_DI 0)LAST_IO_TIME")
+    field(FLNK,"$(Sys)$(Dev)DI_MaxIOTime.PROC")
+}
+
+record(longin,"$(Sys)$(Dev)DI_MaxIOTime") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(ASYNPORT)_DI 0)MAX_IO_TIME")
+}
+# ao record template for poll delay
+record(ao,"$(Sys)$(Dev)DI_PollDelay") {
+    field(DTYP,"asynFloat64")
+    field(PREC,"3")
+    field(OUT,"@asyn($(ASYNPORT)_DI)POLL_DELAY")
+}
+# bo record template for register outputs
+record(bo,"$(Sys)$(Dev)DO:1-Cmd") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(ASYNPORT)_DO 0 0x1)")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+}
+# bo record template for register outputs
+record(bo,"$(Sys)$(Dev)DO:2-Cmd") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(ASYNPORT)_DO 1 0x1)")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+}
+# bo record template for register outputs
+record(bo,"$(Sys)$(Dev)DO:3-Cmd") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(ASYNPORT)_DO 2 0x1)")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+}
+# bo record template for register outputs
+record(bo,"$(Sys)$(Dev)DO:4-Cmd") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(ASYNPORT)_DO 3 0x1)")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+}
+# bo record template for register outputs
+record(bo,"$(Sys)$(Dev)DO:5-Cmd") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(ASYNPORT)_DO 4 0x1)")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+}
+# bo record template for register outputs
+record(bo,"$(Sys)$(Dev)DO:6-Cmd") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(ASYNPORT)_DO 5 0x1)")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+}
+# bi record template for register inputs
+record(bi,"$(Sys)$(Dev)DO:1-Sts") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(ASYNPORT)_DO_RBV 0 0x1)")
+    field(SCAN,"I/O Intr")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+    field(ZSV,"NO_ALARM")
+    field(OSV,"NO_ALARM")
+}
+# bi record template for register inputs
+record(bi,"$(Sys)$(Dev)DO:2-Sts") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(ASYNPORT)_DO_RBV 1 0x1)")
+    field(SCAN,"I/O Intr")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+    field(ZSV,"NO_ALARM")
+    field(OSV,"NO_ALARM")
+}
+# bi record template for register inputs
+record(bi,"$(Sys)$(Dev)DO:3-Sts") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(ASYNPORT)_DO_RBV 2 0x1)")
+    field(SCAN,"I/O Intr")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+    field(ZSV,"NO_ALARM")
+    field(OSV,"NO_ALARM")
+}
+# bi record template for register inputs
+record(bi,"$(Sys)$(Dev)DO:4-Sts") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(ASYNPORT)_DO_RBV 3 0x1)")
+    field(SCAN,"I/O Intr")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+    field(ZSV,"NO_ALARM")
+    field(OSV,"NO_ALARM")
+}
+# bi record template for register inputs
+record(bi,"$(Sys)$(Dev)DO:5-Sts") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(ASYNPORT)_DO_RBV 4 0x1)")
+    field(SCAN,"I/O Intr")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+    field(ZSV,"NO_ALARM")
+    field(OSV,"NO_ALARM")
+}
+# bi record template for register inputs
+record(bi,"$(Sys)$(Dev)DO:6-Sts") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(ASYNPORT)_DO_RBV 5 0x1)")
+    field(SCAN,"I/O Intr")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+    field(ZSV,"NO_ALARM")
+    field(OSV,"NO_ALARM")
+}
+# Template for I/O statistics
+
+record(bo,"$(Sys)$(Dev)DO_HistEnable") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(ASYNPORT)_DO 0 0xFFFF)ENABLE_HISTOGRAM")
+    field(ZNAM,"Disable")
+    field(ONAM,"Enable")
+}
+
+record(bo, "$(Sys)$(Dev)DO_Statistics") {
+    field(SCAN, "10 second")
+    field(FLNK, "$(Sys)$(Dev)DO_Hist.PROC")
+}
+
+record(waveform,"$(Sys)$(Dev)DO_Hist") {
+    field(DTYP,"asynInt32ArrayIn")
+    field(INP,"@asyn($(ASYNPORT)_DO 0)READ_HISTOGRAM")
+    field(FTVL,"LONG")
+    field(NELM,"200")  # This number should match driver
+    field(FLNK,"$(Sys)$(Dev)DO_HistTimeAxis.PROC")
+}
+
+record(waveform,"$(Sys)$(Dev)DO_HistTimeAxis") {
+    field(DTYP,"asynInt32ArrayIn")
+    field(INP,"@asyn($(ASYNPORT)_DO 0)HISTOGRAM_TIME_AXIS")
+    field(FTVL,"LONG")
+    field(NELM,"200")  # This number should match driver
+    field(FLNK,"$(Sys)$(Dev)DO_ReadOK.PROC")
+}
+
+record(longout,"$(Sys)$(Dev)DO_MsPerBin") {
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(ASYNPORT)_DO 0)HISTOGRAM_BIN_TIME")
+    field(DRVL,"0")
+    field(VAL,"1")
+    field(PINI,"1")
+}
+
+record(longin,"$(Sys)$(Dev)DO_ReadOK") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(ASYNPORT)_DO 0)READ_OK")
+    field(FLNK,"$(Sys)$(Dev)DO_WriteOK.PROC")
+}
+
+record(longin,"$(Sys)$(Dev)DO_WriteOK") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(ASYNPORT)_DO 0)WRITE_OK")
+    field(FLNK,"$(Sys)$(Dev)DO_IOErrors.PROC")
+}
+
+record(longin,"$(Sys)$(Dev)DO_IOErrors") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(ASYNPORT)_DO 0)IO_ERRORS")
+    field(FLNK,"$(Sys)$(Dev)DO_LastIOTime.PROC")
+}
+
+record(longin,"$(Sys)$(Dev)DO_LastIOTime") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(ASYNPORT)_DO 0)LAST_IO_TIME")
+    field(FLNK,"$(Sys)$(Dev)DO_MaxIOTime.PROC")
+}
+
+record(longin,"$(Sys)$(Dev)DO_MaxIOTime") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(ASYNPORT)_DO 0)MAX_IO_TIME")
+}
+# Template for I/O statistics
+
+record(bo,"$(Sys)$(Dev)DO_RBV_HistEnable") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(ASYNPORT)_DO_RBV 0 0xFFFF)ENABLE_HISTOGRAM")
+    field(ZNAM,"Disable")
+    field(ONAM,"Enable")
+}
+
+record(bo, "$(Sys)$(Dev)DO_RBV_Statistics") {
+    field(SCAN, "10 second")
+    field(FLNK, "$(Sys)$(Dev)DO_RBV_Hist.PROC")
+}
+
+record(waveform,"$(Sys)$(Dev)DO_RBV_Hist") {
+    field(DTYP,"asynInt32ArrayIn")
+    field(INP,"@asyn($(ASYNPORT)_DO_RBV 0)READ_HISTOGRAM")
+    field(FTVL,"LONG")
+    field(NELM,"200")  # This number should match driver
+    field(FLNK,"$(Sys)$(Dev)DO_RBV_HistTimeAxis.PROC")
+}
+
+record(waveform,"$(Sys)$(Dev)DO_RBV_HistTimeAxis") {
+    field(DTYP,"asynInt32ArrayIn")
+    field(INP,"@asyn($(ASYNPORT)_DO_RBV 0)HISTOGRAM_TIME_AXIS")
+    field(FTVL,"LONG")
+    field(NELM,"200")  # This number should match driver
+    field(FLNK,"$(Sys)$(Dev)DO_RBV_ReadOK.PROC")
+}
+
+record(longout,"$(Sys)$(Dev)DO_RBV_MsPerBin") {
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(ASYNPORT)_DO_RBV 0)HISTOGRAM_BIN_TIME")
+    field(DRVL,"0")
+    field(VAL,"1")
+    field(PINI,"1")
+}
+
+record(longin,"$(Sys)$(Dev)DO_RBV_ReadOK") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(ASYNPORT)_DO_RBV 0)READ_OK")
+    field(FLNK,"$(Sys)$(Dev)DO_RBV_WriteOK.PROC")
+}
+
+record(longin,"$(Sys)$(Dev)DO_RBV_WriteOK") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(ASYNPORT)_DO_RBV 0)WRITE_OK")
+    field(FLNK,"$(Sys)$(Dev)DO_RBV_IOErrors.PROC")
+}
+
+record(longin,"$(Sys)$(Dev)DO_RBV_IOErrors") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(ASYNPORT)_DO_RBV 0)IO_ERRORS")
+    field(FLNK,"$(Sys)$(Dev)DO_RBV_LastIOTime.PROC")
+}
+
+record(longin,"$(Sys)$(Dev)DO_RBV_LastIOTime") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(ASYNPORT)_DO_RBV 0)LAST_IO_TIME")
+    field(FLNK,"$(Sys)$(Dev)DO_RBV_MaxIOTime.PROC")
+}
+
+record(longin,"$(Sys)$(Dev)DO_RBV_MaxIOTime") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(ASYNPORT)_DO_RBV 0)MAX_IO_TIME")
+}
+# ao record template for poll delay
+record(ao,"$(Sys)$(Dev)DO_RBV_PollDelay") {
+    field(DTYP,"asynFloat64")
+    field(PREC,"3")
+    field(OUT,"@asyn($(ASYNPORT)_DO_RBV)POLL_DELAY")
+}

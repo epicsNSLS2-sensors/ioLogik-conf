@@ -1,0 +1,7 @@
+epicsEnvSet("IOC","iocioLogik")
+epicsEnvSet("TOP","/epics/iocs/ioLogik")
+epicsEnvSet("SUPPORT","/epics/src/Deb8/support")
+epicsEnvSet("ASYN","/epics/src/Deb8/support/asyn")
+epicsEnvSet("MODBUS","/epics/src/Deb8/support/modbus")
+epicsEnvSet("DEVIOCSTATS","/epics/src/Deb8/support/iocStats")
+epicsEnvSet("EPICS_BASE","/epics/src/Deb8/support/../base")
