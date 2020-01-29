@@ -207,3 +207,7 @@ dbpf XF:10ID-ES{IO:TC}T:5-I.DESC "TC Channel 5"
 dbpf XF:10ID-ES{IO:TC}T:6-I.DESC "TC Channel 6"
 dbpf XF:10ID-ES{IO:TC}T:7-I.DESC "TC Channel 7"
 dbpf XF:10ID-ES{IO:TC}T:8-I.DESC "TC Channel 8"
+
+## Start any sequence programs
+#seq sncioLogik,"user=softioc"
+dbl > ./records.dbl
